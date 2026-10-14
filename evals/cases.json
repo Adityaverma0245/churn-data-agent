@@ -1,0 +1,9 @@
+[
+  {"id": "describe", "question": "Give me an overview of the dataset", "expect_tool": "describe_dataset", "expect_contains": ["rows", "churn_rate"]},
+  {"id": "by_contract", "question": "Compare churn rate by Contract", "expect_tool": "churn_rate_by", "expect_contains": ["Month-to-month", "Two year"]},
+  {"id": "by_internet", "question": "What is the churn rate per InternetService?", "expect_tool": "churn_rate_by", "expect_contains": ["Fiber optic"]},
+  {"id": "drivers", "question": "Which factors drive churn the most?", "expect_tool": "top_churn_drivers", "expect_contains": ["top_features", "ROC-AUC"]},
+  {"id": "predict_risky", "question": "Predict churn for tenure=2 Contract=Month-to-month InternetService=Fiber optic", "expect_tool": "predict_churn", "expect_contains": ["churn_probability"]},
+  {"id": "out_of_scope", "question": "What is the weather in Delhi?", "expect_tool": null, "expect_contains": ["can't"]},
+  {"id": "bad_column", "question": "Compare churn rate by Salary", "expect_tool": null, "expect_contains": ["can't"]}
+]
